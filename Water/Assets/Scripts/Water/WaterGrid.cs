@@ -5,8 +5,8 @@ using System;
 
 public class WaterGrid : MonoBehaviour
 {
-    private Grid water_grid;
-    private GridVertex[,] gridArray;
+    public Grid water_grid;
+    public GridVertex[,] gridArray;
     private float[,] terrain;
     public int width = 60;
     public int height = 60;
@@ -80,8 +80,8 @@ public class WaterGrid : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {        
-        Vector3Int cellPos = water_grid.LocalToCell(other.gameObject.transform.position - water_grid.transform.position);
+    {
+        /*Vector3Int cellPos = water_grid.LocalToCell(other.gameObject.transform.position - water_grid.transform.position);
         Vector3Int cellWidth = water_grid.LocalToCell(other.gameObject.transform.localScale / 2);
         for (int x = cellPos.x - cellWidth.x + 1; x < cellPos.x + cellWidth.x; x++)
         {
@@ -92,7 +92,7 @@ public class WaterGrid : MonoBehaviour
                     gridArray[x, z].SetH(2 * (cellWidth.y + cellPos.y));
                 }
             }
-        }
+        } */
     }
 
     private float SumDictionary(Dictionary<Vector2Int, float> d)
