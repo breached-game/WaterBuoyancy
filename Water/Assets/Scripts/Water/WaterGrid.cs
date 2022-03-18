@@ -13,7 +13,7 @@ public class WaterGrid : MonoBehaviour
     public int depth = 60;
     private bool inflow;
     private float dx;
-    private float cellSize;
+    public float cellSize;
     public float inflowRate;
     public float gravity;
     public float dt = 0.05f;
